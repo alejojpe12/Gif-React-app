@@ -1,26 +1,37 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 50;
+
 }
 
 body {
     padding: 60px;
+    margin: 0;
+    background-color: #070707;
+    color: rgb(218, 206, 206);
+    display: grid;
+
+
 }
 
 input {
+
     color: gray;
     width: 100%;
     font-size: 1.2rem;
 }
 
+
 .card-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;    
+    
 }
 
 .card {
-    align-content: center;
+    /* align-content: center; */
     border: 1px solid gray;
     border-radius: 1px;
     overflow: hidden;
@@ -38,3 +49,47 @@ input {
     max-height: 170px;
 
 }
+
+.cat_exp_container {
+    transition: all .9s ease-in;
+
+}
+
+.cat_exp {
+    font-size: 20px;
+    transition: all .9s ease-in;
+    
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;    
+}
+
+@media screen and (max-width: 900px) {
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    * {
+        padding: 0;
+    }
+
+    body {
+        padding: 10px
+    }
+
+    .card-grid {
+
+        grid-gap: 2px;            
+    }
+
+    
+  }
+
+
