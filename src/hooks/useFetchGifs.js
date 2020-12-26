@@ -10,6 +10,7 @@ export const useFetchGifs = ( category )=>{
     });
 
     useEffect( () => {
+        
         getGif(category)
         .then(imgs => {
 
